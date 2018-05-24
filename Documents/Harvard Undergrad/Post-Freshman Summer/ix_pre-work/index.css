@@ -1,15 +1,10 @@
 @import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);
 #home {
-    --first-color: #674ea7;
-    --second-color: #f4e767;    
+    --first-color: #111;
+    --second-color: #800000;    
     --light-gray: lightgray;
 }
 
-#next {
-    --first-color: tomato;
-    --second-color: deepskyblue;    
-    --light-gray: lightgray;
-}
 html,body {
     padding: 0;
     height: 100%;
@@ -34,7 +29,7 @@ body {
 #offcanvas-left,
 #offcanvas-right {
     flex: 0 0 280px;
-    background-color: #111;
+    background-color: var(--first-color);
     color: white;
     transition-duration: .5s;
 }
@@ -45,23 +40,23 @@ body {
     margin-right: -280px;
 }
 .togglebar {
-    background-color: #232323;
+    background-color: #800000;
     flex: 0 0;
-    min-width: 50px;
+    min-width: 25px;
     max-width: 5px;
 }
 .toggle i {
     height: 80px;
     font-size: 1.4em;
     width: 100%;
-    color: var(--first-color);
+    color: var(--second-color);
     display: flex;   
     align-items: center;
     justify-content: center;
-    background-color: #111;
+    background-color: #000000;
 }
 .toggle i:hover {
-    color: var(--second-color);
+    color: #e4e4e4;
 }
 .center {
     display: flex;
@@ -70,7 +65,7 @@ body {
     min-width: 95%;
 }
 .center header {
-    background-color: var(--first-color);
+    background-color: #000000;
     color: white;
 }
 header {
@@ -95,7 +90,7 @@ header nav a {
     font-size: 12px;
 }
 .center header nav a:hover {
-    text-decoration: underline
+    color: var(--second-color);
 }
 nav {
     background-color: #f0f0f0;
@@ -118,7 +113,7 @@ nav a {
     text-decoration: none;
 }
 nav a:hover {
-    text-decoration: underline;
+    color: var(--second-color);
 }
 
 .center section {
@@ -141,11 +136,7 @@ figure.hero {
     overflow: hidden;
     margin: 0;
 }
-figure.hero img {
-	-webkit-filter: blur(3px);
-	filter: blur(3px);
-    transform: scale(1.03);
-}
+
 figure.hero figcaption{
     position: absolute;
     font-style: normal;
@@ -158,12 +149,11 @@ figure.hero figcaption{
     transform: translateY(-50%);
     text-align: center;
     width: 100%;
-    background-color: rgba(0,0,0,.6);
     padding: 20px 0;
 }
 figure.hero figcaption * {
     font-weight: bold;
-    font-size: 1.4em;
+    font-size: 4em;
     text-transform: uppercase;
     color: white;
     margin: 0;
@@ -191,7 +181,7 @@ figure.hero figcaption * {
 
 #offcanvas-left li:hover a,
 #offcanvas-right li:hover a {
-    color: var(--first-color);
+    color: var(--second-color);
 }
 
 
@@ -319,9 +309,6 @@ footer table.styled th {
 footer table.styled th, footer table.styled td {
     border: 0;
 }
-
-
-
 p mark {
     background-color: var(--first-color);
     padding: 0 5px;
@@ -345,33 +332,4 @@ img {
     text-decoration: none;
     color: #000;
     padding-right: 1em;
-}
-
-code {
-    background: #eee;
-    padding: 2px 5px;
-}
-
-pre {
-    background: #eee;
-    padding: 10px 15px;
-    overflow: auto;
-}
-
-pre > code {
-    padding: 0;
-}
-.responsive-vid {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
-.responsive-vid iframe,
-.responsive-vid video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
 }
